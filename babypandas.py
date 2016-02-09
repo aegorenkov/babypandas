@@ -1,4 +1,7 @@
+# -*- coding: utf-8 -*-
+
 import pandas as pd
+import eastereggs
 
 def to_panda_df(df):
     return pd.DataFrame(df.values, index=df.index, columns=df.columns)
@@ -149,7 +152,41 @@ class DataFrame(object):
     def pivot(self):
         pass
 
+    def baby_panda(self):
+        
+        baby_panda = """
+
+        babypandas
+        The library that does more with less pandas.
+        https://github.com/aegorenkov/babypandas.git
+
+                  .;;.
+                 /;;;;\  ___      .;;..
+                |;(;;;-""   `'-.,;;;;;/
+                 \;'            ';;;);/
+                 /                \;;'
+                /    .;.   .;.     \/
+                |   ;;o;; ;;o;;    |
+                ;   '"-'` `'-"'    |
+                /\      ._.       /
+              ;;;;;_   ,_Y_,   _.'
+             /;;;;;\`--.___.--;.
+            /|;;;;;;;.__.;;;.  \/\/
+           ;  \;;;;;;;;;;;;;;\  ;\__  .;.
+           |   ';;;;;;;;=;;;;'  |-__;;;;/
+           |     `""`  .---._  /;/;;\;;/
+          / ;         /;;;;;;;-;/;;/|;/
+          \_,\       |;;;;;;;;;;;;| |
+              '-...--';;;;;;;;;;;;\/
+                       `\"""`   `"`
+
+        """
+
+        return baby_panda
+
     #TODO add unique, duplicate, dropduplicate
     #TODO consider adding is null
     #TODO look at sortlevel for multi-index
+if __name__ == '__main__':
+    print eastereggs.baby_panda
 
