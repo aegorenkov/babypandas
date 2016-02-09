@@ -1,4 +1,5 @@
 import pandas as pd
+import eastereggs
 
 def to_panda_df(df):
     return pd.DataFrame(df.values, index=df.index, columns=df.columns)
@@ -149,7 +150,12 @@ class DataFrame(object):
     def pivot(self):
         pass
 
+    def baby_panda(self):
+        return eastereggs.baby_panda
+
     #TODO add unique, duplicate, dropduplicate
     #TODO consider adding is null
     #TODO look at sortlevel for multi-index
+if __name__ == '__main__':
+    print eastereggs.baby_panda
 
