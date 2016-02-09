@@ -151,7 +151,36 @@ class DataFrame(object):
         pass
 
     def baby_panda(self):
-        return eastereggs.baby_panda
+        
+        baby_panda = """
+
+        babypandas
+        The library that does more with less pandas.
+        https://github.com/aegorenkov/babypandas.git
+
+                  .;;.
+                 /;;;;\  ___      .;;..
+                |;(;;;-""   `'-.,;;;;;/
+                 \;'            ';;;);/
+                 /                \;;'
+                /    .;.   .;.     \/
+                |   ;;o;; ;;o;;    |
+                ;   '"-'` `'-"'    |
+                /\      ._.       /
+              ;;;;;_   ,_Y_,   _.'
+             /;;;;;\`--.___.--;.
+            /|;;;;;;;.__.;;;.  \/\/
+           ;  \;;;;;;;;;;;;;;\  ;\__  .;.
+           |   ';;;;;;;;=;;;;'  |-__;;;;/
+           |     `""`  .---._  /;/;;\;;/
+          / ;         /;;;;;;;-;/;;/|;/
+          \_,\       |;;;;;;;;;;;;| |
+              '-...--';;;;;;;;;;;;\/
+                       `\"""`   `"`
+
+        """
+
+        return baby_panda
 
     #TODO add unique, duplicate, dropduplicate
     #TODO consider adding is null
