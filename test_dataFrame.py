@@ -1,5 +1,5 @@
 from unittest import TestCase
-from babypandas import DataFrame, to_panda_df
+from babypandas import DataFrame, Index, Series, to_panda
 import numpy as np
 import pandas.util.testing as pdt
 
@@ -12,8 +12,12 @@ def assert_frame_equal(left, right):
     :param right: babypandas dataframe
     :return: None
     """
-    pdt.assert_frame_equal(to_panda_df(left), to_panda_df(right))
+    pdt.assert_frame_equal(to_panda(left), to_panda(right))
 
+
+class TestIndex(TestCase):
+    def test__getitem__(self):
+        df.columns[0]
 
 class TestDataFrame(TestCase):
     def setUp(self):
@@ -23,8 +27,10 @@ class TestDataFrame(TestCase):
         self.df.head()
         self.df.head(4)
 
-    def test___getitem__(self):
+    def test__getitem__(self):
         self.df[0]
+        self.assertIsInstance(self.df[0], Series)
+        self.df[self.df.columns[0]]
 
     def test_tail(self):
         self.df.tail()
@@ -126,5 +132,17 @@ class TestDataFrame(TestCase):
     def test_set_index(self):
         self.df.set_index(0)
 
-    # def test_pivot(self):
-    #
+    def test_assign(self):
+        self.df.assign(test=[4, 5, 6, 7])
+
+    def test_describe(self):
+        self.df.describe()
+
+    def test_inf0(self):
+        self.df.info()
+
+    def test_replace(self):
+        self.df.replace({0:4})
+
+    def test_count(self):
+        self.df.count()
